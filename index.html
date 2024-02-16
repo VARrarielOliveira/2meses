@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️2M de Rariel e Jéssica!❤️</title>
+    <style>
+        body{background-color: red;}
+        .painel {margin:auto ;background-color: white; width: 500px; height: 500px; border-radius: 20px; text-align: center; padding-top: 50px; font-family: monospace;}
+        #Presente {height: 40px; width: 140px;border: 2px solid rgb(0, 0, 0);border-radius: 5%; background-color: red; margin-left: -75px;}
+        #carta {height: 40px; width: 140px;border: 2px solid rgb(0, 0, 0);border-radius: 5%; background-color: rgb(255, 230, 0);margin-left: 9px;}
+        #dinheiro {position: absolute; height: 40px; width: 60px; background-color: green;border: 2px solid rgb(0, 0, 0);border-radius: 5%; margin-left: 15px;}
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Feliz 2 meses amor!</h1>
+        <h3>Obrigado por me aturar por todo esse tempo, eu sei que não é fácil mas eu te amo! Fora que você não tem outra opção, sou seu e você é minha para sempre.</h3>
+        <a href="presente.html"><button id="Presente"> Presente misterioso! </button></a>
+        <a href="cartinha.html"><button id="carta"> Quero ler a cartinha! </button></a>
+        <button onmouseover="fuja()" id="dinheiro"> R$2,00 </button>
+        <img src="https://i.pinimg.com/originals/ef/96/87/ef9687b36e36605b375b4e9b0cde51db.gif" alt="">
+    </div>
+
+    <Script>
+        function fuja(){
+            var botaoDinheiro = document.getElementById("dinheiro")
+            var largura = window.innerWidth;
+            var altura = window.innerHeight;
+            var maxX = largura - botaoDinheiro.offsetWidth;
+            var maxY = altura - botaoDinheiro.offsetHeight;
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoDinheiro.style.left = aleatorioX + "px";
+            botaoDinheiro.style.top = aleatorioY + "px";
+        }
+    </Script>
+</body>
+</html>
