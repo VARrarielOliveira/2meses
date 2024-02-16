@@ -9,7 +9,6 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
     }
     .photo-container {
       width: 100%;
@@ -51,14 +50,19 @@
 
       // Função para preencher a tela com imagens aleatórias
       function fillScreenWithRandomImages() {
-        var totalImages = 16; // Número total de imagens no mosaico
-        for (var i = 0; i < totalImages; i++) {
+	let math = []
+        while (math.length < 4) {
           var randomIndex = Math.floor(Math.random() * images.length);
-          var img = document.createElement('img');
-          img.src = images[randomIndex];
-          img.classList.add('photo');
-          document.querySelector('.photo-container').appendChild(img);
+	  if (math.indexOf(randomIndex ) == -1) {
+		math.push(randomIndex )
+	  }
         }
+	math.map((e) => {
+	var img = document.createElement('img');
+          img.src = images[e];
+          img.classList.add('photo');
+          document.querySelector('.photo-container').appendChild(img);	
+	})
       }
 
       // Preencha a tela com imagens aleatórias quando a página carregar
